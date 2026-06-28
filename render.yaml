@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: online-shopping-analysis
+    env: python
+    buildCommand: py -m pip install -r requirements.txt
+    startCommand: gunicorn backend.app:app
